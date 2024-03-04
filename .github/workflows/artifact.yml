@@ -1,0 +1,20 @@
+name: Artifact information
+on: workflow_dispatch
+jobs:
+  Infos:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Get code
+      uses: actions/checkout@v4
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+    - name: Output Github context
+      run: echo "${{ toJSON(github) }}"
+    - name: Upload artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: tacs-artifact
+        path: |
+          README.md
