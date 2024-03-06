@@ -26,4 +26,9 @@ jobs:
         name: Temou-training
         path: |
           test.py      
-          
+     -- name: Upload artifact from folder
+      uses: actions/upload-artifact@v4
+      with:
+        name: folder-artif
+        path: |     
+          .github/workflows
