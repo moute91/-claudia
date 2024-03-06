@@ -12,9 +12,11 @@ jobs:
         node-version: '18'
     - name: Output Github context
       run: echo "${{ toJSON(github) }}"
+    - name: Zip file
+      run: zip -r README.md.zip README.md
     - name: Upload artifact
       uses: actions/upload-artifact@v4
       with:
         name: tacs-artifact
         path: |
-          README.md
+          README.md.zip
