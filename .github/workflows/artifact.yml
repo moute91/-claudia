@@ -20,3 +20,4 @@ jobs:
         name: tacs-artifact
         path: |
           README.md.zip
+          test.py
