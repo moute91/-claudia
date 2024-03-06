@@ -20,4 +20,10 @@ jobs:
         name: tacs-artifact
         path: |
           README.md.zip
-          test.py
+    - name: Upload artifact test
+      uses: actions/upload-artifact@v4
+      with:
+        name: Temou-training
+        path: |
+          test.py      
+          
